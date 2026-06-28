@@ -3,7 +3,7 @@ import pandas as pd
 
 # --- 1. CONFIGURACIÓN DE LA PÁGINA ---
 st.set_page_config(
-    page_title="Candy Tracker - Steal a Brainrot", 
+    page_title="Candy - Steal a Brainrot", 
     page_icon="🍬", 
     layout="centered"
 )
@@ -81,11 +81,11 @@ if 'candy_tracker' not in st.session_state:
     }
 
 # --- 3. VISTA PÚBLICA ---
-st.title("🍬 Candy Tracker - Lista de Intercambios")
-st.write("Esta es mi colección actual y los personajes que estoy buscando activamente en variante **Candy**.")
+st.title("🍬 Candy - Lista")
+st.write("Estos son los Brainrots que tengo y los que me faltan **Candy**.")
 
 # Creamos pestañas para organizar la visualización pública
-tab_busco, tab_tengo = st.tabs(["🔍 Personajes que BUSCO", "✅ Personajes que YA TENGO"])
+tab_busco, tab_tengo = st.tabs(["🔍 Brainrots que BUSCO", "✅ Brainrots que YA TENGO"])
 
 with tab_busco:
     if st.session_state.candy_tracker["busco"]:
